@@ -1,4 +1,4 @@
-[![Build Status](https://semaphoreci.com/api/v1/manoelcyreno/lfrgs-tests-samples/branches/master/badge.svg)](https://semaphoreci.com/manoelcyreno/lfrgs-tests-samples)
+[![Build Status](https://semaphoreci.com/api/v1/manoelcyreno/frw-tests-samples/branches/master/badge.svg)](https://semaphoreci.com/manoelcyreno/frw-tests-samples)
 
 # Welcome to Liferay GS Tests Samples.
 
@@ -27,7 +27,7 @@ These SAMPLES are based on Liferay GS Selenium Commons Framework, that code can 
 1. Download the "tests-sample-code.sh" file, into the Gradle project root folder.
 2. Set the permission to execute on "tests-sample-code.sh" file (command: chmod +x tests-sample-code.sh)
 3. Run the "tests-sample-code.sh" file (command: ./tests-sample-code.sh)
-4. Configure your `SeleniumPropertyKeys.properties` and yours `drivers` according the Framework Setup (https://github.com/manoelcyreno/lfrgs-tests-samples/wiki/Create-the-configuration-aut%C3%B3mat%C3%ADcly)
+4. Configure your `SeleniumPropertyKeys.properties` and yours `drivers` according the [Framework Setup](https://bitbucket.org/gs-br/frw-tests-samples/wiki/Create%20the%20configuration%20aut%C3%B3mat%C3%ADcly)
 
 ### What this script will make?
 
