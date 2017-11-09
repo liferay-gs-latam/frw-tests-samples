@@ -1,6 +1,6 @@
 [![Build Status](https://semaphoreci.com/api/v1/manoelcyreno/frw-tests-samples/branches/master/badge.svg)](https://semaphoreci.com/manoelcyreno/frw-tests-samples)
 
-# Welcome to Liferay GS Tests Samples.
+# Welcome to Tests Samples Framework.
 
 These SAMPLES are based on Liferay GS Selenium Commons Framework, that code can be used for anyone of wanna make tests in Liferay using Selenium with BDD.
 
