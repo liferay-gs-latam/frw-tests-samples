@@ -29,6 +29,11 @@ echo '---------------------------------------------------------------'
 cp -r frw-tests-samples/JMeterScripts/* ../JMeterScripts/
 
 echo '---------------------------------------------------------------'
+echo 'Create the "JMeter Scripts" samples codes'
+echo '---------------------------------------------------------------'
+cp frw-tests-samples/Jenkinsfile.TEMPLATE ../
+
+echo '---------------------------------------------------------------'
 echo 'Remove the "TEMP" configuration'
 echo '---------------------------------------------------------------'
 cd ..
