@@ -1,4 +1,4 @@
-rootProject.name = 'lfrgs-tests-samples'
+rootProject.name = 'frw-tests-samples'
 
 gradle.allprojects {
 	buildscript {
