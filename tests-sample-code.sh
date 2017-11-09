@@ -15,18 +15,18 @@ echo 'Create the "TEMP" configuration'
 echo '---------------------------------------------------------------'
 mkdir -p temp/
 cd temp
-git clone https://github.com/manoelcyreno/lfrgs-selenium-samples.git
+git clone https://manoelcyreno@bitbucket.org/gs-br/frw-tests-samples.git
 
 echo '---------------------------------------------------------------'
 echo 'Create the "SAMPLES" codes'
 echo '---------------------------------------------------------------'
-cp -r lfrgs-selenium-samples/modules/* ../modules/
-cp -rf lfrgs-selenium-samples/settings.gradle ../settings.gradle
+cp -r frw-tests-samples/modules/* ../modules/
+cp -rf frw-tests-samples/settings.gradle ../settings.gradle
 
 echo '---------------------------------------------------------------'
 echo 'Create the "JMeter Scripts" samples codes'
 echo '---------------------------------------------------------------'
-cp -r lfrgs-selenium-samples/JMeterScripts/* ../JMeterScripts/
+cp -r frw-tests-samples/JMeterScripts/* ../JMeterScripts/
 
 echo '---------------------------------------------------------------'
 echo 'Remove the "TEMP" configuration'
