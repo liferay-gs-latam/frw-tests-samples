@@ -3,7 +3,6 @@ package com.liferay.samples.functional.test.pages;
 import org.openqa.selenium.By;
 
 import com.liferay.gs.testFramework.SeleniumReadPropertyKeys;
-import com.liferay.gs.testFramework.SeleniumWaitMethods;
 import com.liferay.samples.functional.test.utils.CommonMethods;
 
 public class UserPage {

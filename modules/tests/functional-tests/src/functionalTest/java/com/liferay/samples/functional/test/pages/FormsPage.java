@@ -6,7 +6,6 @@ import static org.junit.Assert.assertTrue;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.liferay.gs.testFramework.SeleniumReadPropertyKeys;
@@ -84,10 +83,6 @@ public class FormsPage {
 		}
 
 		By fieldOnScreen = By.cssSelector(".form-builder-field-content-target");
-
-		SeleniumReadPropertyKeys.DRIVER.findElement(fieldOnScreen).sendKeys(Keys.ESCAPE);
-		SeleniumReadPropertyKeys.DRIVER.findElement(By.xpath(".//*[contains(text(), 'Yes, cancel')]"))
-				.sendKeys(Keys.ESCAPE);
 
 		assertTrue(SeleniumReadPropertyKeys.DRIVER.findElement(fieldOnScreen).isDisplayed());
 	}
