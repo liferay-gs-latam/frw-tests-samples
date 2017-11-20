@@ -49,9 +49,12 @@ These SAMPLES are based on Liferay GS Selenium Commons Framework, that code can 
 2. `gradle integrationTest` into the unit-tests folder.
 3. `gradle unitTest` into the unit-tests folder.
 4. For Java Script Tests Using Jasmine:
- 4.1. Perform `npm install -g jasmine`
- 4.2. Go to `/modules/tests/js-unit-tests/jasmine`
- 4.3. Perform `jasmine` command to run all Java Script tests.
+
+4.1. Perform `npm install -g jasmine`
+
+4.2. Go to `/modules/tests/js-unit-tests/jasmine`
+ 
+4.3. Perform `jasmine` command to run all Java Script tests.
 
 ### Run by line command into the root folder.
 
