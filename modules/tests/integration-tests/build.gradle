@@ -27,13 +27,14 @@ project.ext {
 	junitVersion = '4.12'
 	mockitoVersion = '2.10.0'
 	seleniumVersion = '3.3.1'
-	lfrgsSeleniumCommonsVersion = '2.1.5'
+	frwSeleniumCommonsVersion = '2.1.7'
 }
 
 dependencies {
 	compile group: "org.json", name: "org.json", version: "2.0"
 	
-	compile 'com.liferay.gs:lfrgs-selenium-commons:' + lfrgsSeleniumCommonsVersion
+	compile 'com.liferay.gs:frw-selenium-commons:' + frwSeleniumCommonsVersion
+
 	compile 'org.seleniumhq.selenium:selenium-api:' + seleniumVersion
 	compile 'org.seleniumhq.selenium:selenium-java:' + seleniumVersion
 	compile 'org.seleniumhq.selenium:selenium-remote-driver:' + seleniumVersion
