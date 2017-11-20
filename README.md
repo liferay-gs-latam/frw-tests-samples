@@ -22,6 +22,11 @@ These SAMPLES are based on Liferay GS Selenium Commons Framework, that code can 
 2. Product Exchange (positive scenario) [samples2]
 3. TestApp portlet that is a portlet how print some text on it own portlet. (positive and negative scenarios) [samples3]
 
+## Java Script - Jasmine Unit Test (Java Script Unit Tests):
+
+1. Test Suite for verify something
+2. Test Suite for verify using specific methods 
+
 ## How Use?
 
 1. Download the "tests-sample-code.sh" file, into the Gradle project root folder.
@@ -43,6 +48,10 @@ These SAMPLES are based on Liferay GS Selenium Commons Framework, that code can 
 1. `gradle cucumberTest` into the functional-tests folder.
 2. `gradle integrationTest` into the unit-tests folder.
 3. `gradle unitTest` into the unit-tests folder.
+4. For Java Script Tests Using Jasmine:
+4.1. Perform `npm install -g jasmine`
+4.2. Go to `/modules/tests/js-unit-tests/jasmine`
+4.3. Perform `jasmine` command to run all Java Script tests.
 
 ### Run by line command into the root folder.
 
@@ -51,7 +60,7 @@ Configure your project according: (https://github.com/manoelcyreno/lfrgs-seleniu
 1. `./gradlew modules:tests:functional-tests:cucumberTest` into the root folder.
 2. `./gradlew modules:tests:integration-tests:integrationTest` into the root folder.
 3. `./gradlew modules:tests:unit-tests:unitTest` into the root folder.
-
+4. For Java Script Tests Using Jasmine you must go to the specific folder according topic above.
 
 ### Run by IDE.
 
