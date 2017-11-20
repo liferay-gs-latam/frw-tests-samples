@@ -40,26 +40,26 @@ These SAMPLES are based on Liferay GS Selenium Commons Framework, that code can 
 
 ### Run by line command into the specific test folder.
 
-`gradle cucumberTest` into the functional-tests folder.
-<br> `gradle integrationTest` into the unit-tests folder.
-<br> `gradle unitTest` into the unit-tests folder.
+1. `gradle cucumberTest` into the functional-tests folder.
+2. `gradle integrationTest` into the unit-tests folder.
+3. `gradle unitTest` into the unit-tests folder.
 
 ### Run by line command into the root folder.
 
 Configure your project according: (https://github.com/manoelcyreno/lfrgs-selenium-commons/wiki/Setup#how-to-use)
 
-`./gradlew modules:tests:functional-tests:cucumberTest` into the root folder.
-<br> `./gradlew modules:tests:integration-tests:integrationTest` into the root folder.
-<br> `./gradlew modules:tests:unit-tests:unitTest` into the root folder.
+1. `./gradlew modules:tests:functional-tests:cucumberTest` into the root folder.
+2. `./gradlew modules:tests:integration-tests:integrationTest` into the root folder.
+3. `./gradlew modules:tests:unit-tests:unitTest` into the root folder.
 
 
 ### Run by IDE.
 
 Configure your project according: (https://github.com/manoelcyreno/lfrgs-selenium-commons/wiki/Setup#how-to-use)
 
-`runTest.java` into the src/functionalTest/java/com/liferay/samples/functional/test folder.
-<br> `runTest.java` into the src/integrationTest/java/com/liferay/samples/integration/test folder.
-<br> `runTest.java` into the src/unitTest/java/com/liferay/samples(1, 2 or 3)/unit/test folder.
+1. `runTest.java` into the src/functionalTest/java/com/liferay/samples/functional/test folder.
+2. `runTest.java` into the src/integrationTest/java/com/liferay/samples/integration/test folder.
+3. `runTest.java` into the src/unitTest/java/com/liferay/samples(1, 2 or 3)/unit/test folder.
 
 ## Goal of wiki project
 
