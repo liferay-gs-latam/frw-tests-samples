@@ -3,6 +3,8 @@ apply plugin: 'eclipse'
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
 
+jar.enabled = false
+
 group = 'com.liferay.samples'
 version = '1.0.0-SNAPSHOT'
 
