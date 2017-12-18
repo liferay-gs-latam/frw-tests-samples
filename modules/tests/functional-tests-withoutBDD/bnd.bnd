@@ -1,0 +1,3 @@
+Bundle-Name: functional-tests-withoutBDD
+Bundle-SymbolicName: functional.tests.withoutBDD
+Bundle-Version: 1.0.0

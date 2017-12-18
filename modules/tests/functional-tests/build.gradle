@@ -14,7 +14,7 @@ jar.enabled = false
 group = 'com.liferay.samples'
 version = '1.0.0-SNAPSHOT'
 
-description = """Samples Functional Test Module"""
+description = """Samples of BDD Functional Test Module"""
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -29,7 +29,7 @@ project.ext {
 	junitVersion = '4.12'
 	seleniumVersion = '3.3.1'
 	cucumberVersion = '1.2.5'
-	frwSeleniumCommonsVersion = '2.1.7'
+	frwSeleniumCommonsVersion = '2.2.0'
 }
 
 dependencies {
@@ -95,14 +95,12 @@ configurations {
 }
 
 task cucumberTest(type: Test) {
-    description 'Runs the Cucumber Tests.'
+    description 'Runs the Functional Tests with the BDD flow, performed by Cucumber framework.'
 
     testClassesDir = sourceSets.functionalTest.output.classesDir
     classpath = sourceSets.functionalTest.runtimeClasspath
     outputs.upToDateWhen { false }
 }
-
-check.dependsOn cucumberTest
 
 gradle.taskGraph.whenReady { graph ->
     if (graph.hasTask(build)) {
@@ -110,24 +108,8 @@ gradle.taskGraph.whenReady { graph ->
     }
 }
 
-dependencies {
-	functionalTestCompile(
-            'info.cukes:cucumber-core:' + cucumberVersion,
-            'info.cukes:cucumber-java:' + cucumberVersion,
-            'info.cukes:cucumber-java:' + cucumberVersion,
-            'info.cukes:cucumber-junit:' + cucumberVersion,
-            'info.cukes:cucumber-spring:' + cucumberVersion,
-            'org.springframework:spring-beans:4.2.5.RELEASE'
-    )
-    functionalTestRuntime(
-            'org.springframework:spring-context:4.2.5.RELEASE',
-            'org.springframework:spring-test:4.2.5.RELEASE',
-            'org.springframework:spring-tx:4.2.5.RELEASE'
-    )
-}
-
-task setupFunctionalTestWithGoogleChrome {
-    description 'Create the Functional Tests properties and Chrome Driver, but only work if run on project root folder.'
+task setupCucumberTestWithGoogleChrome {
+    description 'Create the Functional Tests properties and Chrome Driver, for Functional Test with BDD flow, but only work if run on project root folder.'
 
 	doLast {
 		def baseDir =  "${project.hasProperty('liferay.workspace.home.dir') ? project.property('liferay.workspace.home.dir') : 'modules'}"
@@ -147,7 +129,7 @@ task setupFunctionalTestWithGoogleChrome {
 		if ( (Os.isFamily(Os.FAMILY_WINDOWS)) && (!new File( baseDir + '/tests/functional-tests/SeleniumProperties/chromedriver.exe').exists()) ) {
 			println "Create Configuration for Windows to use the Google Chrome Driver"
 			download {
-				src 'https://chromedriver.storage.googleapis.com/2.33/chromedriver_win32.zip'
+				src 'https://chromedriver.storage.googleapis.com/2.34/chromedriver_win32.zip'
 				dest new File(SeleniumPropertyKeysPath, 'chromedriver_win32.zip')
 			}
 
@@ -161,7 +143,7 @@ task setupFunctionalTestWithGoogleChrome {
 		} else if ( (Os.isFamily(Os.FAMILY_MAC)) && (!new File( baseDir + '/tests/functional-tests/SeleniumProperties/chromedriver').exists()) ) {
 			println "Create Configuration for Mac to use the Google Chrome Driver"
 			download {
-				src 'https://chromedriver.storage.googleapis.com/2.33/chromedriver_mac64.zip'
+				src 'https://chromedriver.storage.googleapis.com/2.34/chromedriver_mac64.zip'
 				dest new File(SeleniumPropertyKeysPath, 'chromedriver_mac64.zip')
 			}
             
@@ -175,7 +157,7 @@ task setupFunctionalTestWithGoogleChrome {
 		} else if ( (Os.isFamily(Os.FAMILY_UNIX)) && (!new File( baseDir + '/tests/functional-tests/SeleniumProperties/chromedriver').exists()) ) {
 			println "Create Configuration for Unix to use the Google Chrome Driver"
 			download {
-				src 'https://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip'
+				src 'https://chromedriver.storage.googleapis.com/2.34/chromedriver_linux64.zip'
 				dest new File(SeleniumPropertyKeysPath, 'chromedriver_linux64.zip')
 			}
 

@@ -29,7 +29,7 @@ project.ext {
 	junitVersion = '4.12'
 	mockitoVersion = '2.10.0'
 	seleniumVersion = '3.3.1'
-	frwSeleniumCommonsVersion = '2.1.7'
+	frwSeleniumCommonsVersion = '2.2.0'
 }
 
 dependencies {
@@ -99,17 +99,6 @@ gradle.taskGraph.whenReady { graph ->
     }
 }
 
-dependencies {
-	integrationTestCompile(
-            'org.springframework:spring-beans:4.2.5.RELEASE'
-    )
-    integrationTestRuntime(
-            'org.springframework:spring-context:4.2.5.RELEASE',
-            'org.springframework:spring-test:4.2.5.RELEASE',
-            'org.springframework:spring-tx:4.2.5.RELEASE'
-    )
-}
-
 task setupIntegrationTestWithGoogleChrome {
     description 'Create the Integration Tests properties and Chrome Driver, but only work if run on project root folder.'
 
@@ -131,7 +120,7 @@ task setupIntegrationTestWithGoogleChrome {
 		if ( (Os.isFamily(Os.FAMILY_WINDOWS)) && (!new File( baseDir + '/tests/integration-tests/SeleniumProperties/chromedriver.exe').exists()) ) {
 			println "Create Configuration for Windows to use the Google Chrome Driver"
 			download {
-				src 'https://chromedriver.storage.googleapis.com/2.33/chromedriver_win32.zip'
+				src 'https://chromedriver.storage.googleapis.com/2.34/chromedriver_win32.zip'
 				dest new File(SeleniumPropertyKeysPath, 'chromedriver_win32.zip')
 			}
 
@@ -145,7 +134,7 @@ task setupIntegrationTestWithGoogleChrome {
 		} else if ( (Os.isFamily(Os.FAMILY_MAC)) && (!new File( baseDir + '/tests/integration-tests/SeleniumProperties/chromedriver').exists()) ) {
 			println "Create Configuration for Mac to use the Google Chrome Driver"
 			download {
-				src 'https://chromedriver.storage.googleapis.com/2.33/chromedriver_mac64.zip'
+				src 'https://chromedriver.storage.googleapis.com/2.34/chromedriver_mac64.zip'
 				dest new File(SeleniumPropertyKeysPath, 'chromedriver_mac64.zip')
 			}
             
@@ -159,7 +148,7 @@ task setupIntegrationTestWithGoogleChrome {
 		} else if ( (Os.isFamily(Os.FAMILY_UNIX)) && (!new File( baseDir + '/tests/integration-tests/SeleniumProperties/chromedriver').exists()) ) {
 			println "Create Configuration for Unix to use the Google Chrome Driver"
 			download {
-				src 'https://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip'
+				src 'https://chromedriver.storage.googleapis.com/2.34/chromedriver_linux64.zip'
 				dest new File(SeleniumPropertyKeysPath, 'chromedriver_linux64.zip')
 			}
 
