@@ -4,7 +4,11 @@
 
 These SAMPLES are based on Liferay GS Selenium Commons Framework, that code can be used for anyone of wanna make tests in Liferay using Selenium with BDD.
 
-## BDD Samples (Functional Tests):
+## Functional Tests (Without BDD Samples):
+
+1. Login (positive and negative scenarios)
+
+## Functional Tests (With BDD Samples):
 
 1. Login (positive and negative scenarios) [/src/functionalTest/resources/Login.feature]
 2. Add Portlet on screen (positive scenario) [/src/functionalTest/resources/Portlet.feature]
@@ -28,6 +32,7 @@ These SAMPLES are based on Liferay GS Selenium Commons Framework, that code can 
 2. Test Suite for verify using specific methods 
 
 ## How Use?
+PS.: Your Bundle must be configured previously.
 
 1. Download the "tests-sample-code.sh" file, into the Gradle project root folder.
 2. Set the permission to execute on "tests-sample-code.sh" file (command: chmod +x tests-sample-code.sh)
@@ -45,33 +50,36 @@ These SAMPLES are based on Liferay GS Selenium Commons Framework, that code can 
 
 ### Run by line command into the specific test folder.
 
-1. `gradle cucumberTest` into the functional-tests folder.
-2. `gradle integrationTest` into the unit-tests folder.
-3. `gradle unitTest` into the unit-tests folder.
-4. For Java Script Tests Using Jasmine:
+1. `gradle performTest` into the functional-tests-withoutBDD folder.
+2. `gradle cucumberTest` into the functional-tests folder.
+3. `gradle integrationTest` into the integration-tests folder.
+4. `gradle unitTest` into the unit-tests folder.
+5. For Java Script Tests Using Jasmine:
 
-4.1. Perform `npm install -g jasmine`
+5.1. Perform `npm install -g jasmine`
 
-4.2. Go to `/modules/tests/js-unit-tests/jasmine`
+5.2. Go to `/modules/tests/js-unit-tests/jasmine`
  
-4.3. Perform `jasmine` command to run all Java Script tests.
+5.3. Perform `jasmine` command to run all Java Script tests.
 
 ### Run by line command into the root folder.
 
 Configure your project according: (https://github.com/manoelcyreno/lfrgs-selenium-commons/wiki/Setup#how-to-use)
 
-1. `./gradlew modules:tests:functional-tests:cucumberTest` into the root folder.
-2. `./gradlew modules:tests:integration-tests:integrationTest` into the root folder.
-3. `./gradlew modules:tests:unit-tests:unitTest` into the root folder.
-4. For Java Script Tests Using Jasmine you must go to the specific folder according topic above.
+1. `./gradlew modules:tests:functional-tests-withoutBDD:performTest ` into the root folder.
+2. `./gradlew modules:tests:functional-tests:cucumberTest` into the root folder.
+3. `./gradlew modules:tests:integration-tests:integrationTest` into the root folder.
+4. `./gradlew modules:tests:unit-tests:unitTest` into the root folder.
+5. For Java Script Tests Using Jasmine you must go to the specific folder according topic above.
 
 ### Run by IDE.
 
 Configure your project according: (https://github.com/manoelcyreno/lfrgs-selenium-commons/wiki/Setup#how-to-use)
 
-1. `runTest.java` into the src/functionalTest/java/com/liferay/samples/functional/test folder.
-2. `runTest.java` into the src/integrationTest/java/com/liferay/samples/integration/test folder.
-3. `runTest.java` into the src/unitTest/java/com/liferay/samples(1, 2 or 3)/unit/test folder.
+1. `runAllTests.java` into the src/functionalTest/java/com/liferay/samples/functional/testsSuite folder.
+2. `runTest.java` into the src/functionalTest/java/com/liferay/samples/functional/test folder.
+3. `runTest.java` into the src/integrationTest/java/com/liferay/samples/integration/test folder.
+4. `runTest.java` into the src/unitTest/java/com/liferay/samples(1, 2 or 3)/unit/test folder.
 
 ## Goal of wiki project
 
