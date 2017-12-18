@@ -1,73 +1,11 @@
 import org.apache.tools.ant.taskdefs.condition.Os
 
-plugins {
-    id "de.undercouch.download" version "3.1.2"
-}
-
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'maven'
-apply plugin: 'maven-publish'
-
 jar.enabled = false
 
 group = 'com.liferay.integration'
 version = '1.0.0-SNAPSHOT'
 
 description = """Samples Integration Test Module"""
-
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
-repositories {
-    jcenter()
-    mavenCentral()
-    mavenLocal()
-}
-
-project.ext {
-	junitVersion = '4.12'
-	mockitoVersion = '2.10.0'
-	seleniumVersion = '3.3.1'
-	frwSeleniumCommonsVersion = '2.2.0'
-}
-
-dependencies {
-	compile group: "org.json", name: "org.json", version: "2.0"
-	
-	compile 'com.liferay.gs:frw-selenium-commons:' + frwSeleniumCommonsVersion
-
-	compile 'org.seleniumhq.selenium:selenium-api:' + seleniumVersion
-	compile 'org.seleniumhq.selenium:selenium-java:' + seleniumVersion
-	compile 'org.seleniumhq.selenium:selenium-remote-driver:' + seleniumVersion
-	compile 'org.seleniumhq.selenium:selenium-support:' + seleniumVersion
-	
-	testCompile 'org.mockito:mockito-core:' + mockitoVersion	
-    testCompile 'junit:junit:' + junitVersion
-}
-
-tasks.withType(Test) {
-    testLogging {
-        events "passed", "skipped", "failed", "standardOut"
-        showExceptions true
-        exceptionFormat "full"
-        showCauses true
-        showStackTraces true
-
-        afterSuite { desc, result ->
-            if (!desc.parent) {
-                def output = "Results: ${result.resultType} (${result.testCount} tests, ${result.successfulTestCount} successes, ${result.failedTestCount} failures, ${result.skippedTestCount} skipped)"
-                def startItem = '|  ', endItem = '  |'
-                def repeatLength = startItem.length() + output.length() + endItem.length()
-                println('\n' + ('-' * repeatLength) + '\n' + startItem + output + endItem + '\n' + ('-' * repeatLength))
-            }
-        }
-    }
-}
-
-tasks.withType(Test) {
-    reports.html.destination = file("${reporting.baseDir}/${name}")
-}
 
 sourceSets {
     integrationTest {

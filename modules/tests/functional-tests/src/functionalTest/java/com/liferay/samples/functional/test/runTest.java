@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/functionalTest/resources/Login.feature",
+        features = "src/functionalTest/resources",
         glue = {"com/liferay/samples/functional/test/steps"},
         plugin = {"pretty", "html:reports/cucumber"},
         tags = {})
