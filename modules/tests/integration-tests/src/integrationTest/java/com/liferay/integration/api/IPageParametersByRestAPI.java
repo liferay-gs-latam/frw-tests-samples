@@ -1,4 +1,4 @@
-package com.liferay.samples;
+package com.liferay.integration.api;
 
 public interface IPageParametersByRestAPI {
     public String getGroupID();

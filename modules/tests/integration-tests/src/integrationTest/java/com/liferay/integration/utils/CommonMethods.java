@@ -1,4 +1,4 @@
-package com.liferay.samples.utils;
+package com.liferay.integration.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URL;

@@ -1,11 +1,11 @@
-package com.liferay.samples;
+package com.liferay.integration.api;
 
 import java.util.List;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 
-import com.liferay.samples.utils.CommonMethods;
+import com.liferay.integration.utils.CommonMethods;
 
 public class CreatePageByRestAPI {
 

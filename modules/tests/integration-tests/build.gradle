@@ -11,7 +11,7 @@ apply plugin: 'maven-publish'
 
 jar.enabled = false
 
-group = 'com.liferay.samples'
+group = 'com.liferay.integration'
 version = '1.0.0-SNAPSHOT'
 
 description = """Samples Integration Test Module"""
@@ -92,8 +92,6 @@ task integrationTest(type: Test) {
     classpath = sourceSets.integrationTest.runtimeClasspath
     outputs.upToDateWhen { false }
 }
-
-check.dependsOn integrationTest
 
 gradle.taskGraph.whenReady { graph ->
     if (graph.hasTask(build)) {

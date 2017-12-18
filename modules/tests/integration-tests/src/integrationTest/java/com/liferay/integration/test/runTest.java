@@ -1,4 +1,4 @@
-package com.liferay.samples.integration.test;
+package com.liferay.integration.test;
 
 import static com.liferay.gs.testFramework.SeleniumReadPropertyKeys.DRIVER;
 import static com.liferay.gs.testFramework.SeleniumWaitMethods.waitMediumTime;
@@ -18,10 +18,10 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import com.liferay.gs.testFramework.SeleniumReadPropertyKeys;
-import com.liferay.samples.CreatePageByRestAPI;
-import com.liferay.samples.DeletePageByRestAPI;
-import com.liferay.samples.IPageParametersByRestAPI;
-import com.liferay.samples.utils.CommonMethods;
+import com.liferay.integration.api.CreatePageByRestAPI;
+import com.liferay.integration.api.DeletePageByRestAPI;
+import com.liferay.integration.api.IPageParametersByRestAPI;
+import com.liferay.integration.utils.CommonMethods;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class runTest {

@@ -5,7 +5,7 @@ apply plugin: 'maven-publish'
 
 jar.enabled = false
 
-group = 'com.liferay.samples'
+group = 'com.liferay.unit'
 version = '1.0.0-SNAPSHOT'
 
 description = """Samples Unit Test Module"""
@@ -81,8 +81,6 @@ task unitTest(type: Test) {
     classpath = sourceSets.unitTest.runtimeClasspath
     outputs.upToDateWhen { false }
 }
-
-check.dependsOn unitTest
 
 gradle.taskGraph.whenReady { graph ->
     if (graph.hasTask(build)) {
