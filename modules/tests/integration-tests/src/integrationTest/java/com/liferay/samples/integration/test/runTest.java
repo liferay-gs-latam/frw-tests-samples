@@ -1,5 +1,7 @@
 package com.liferay.samples.integration.test;
 
+import static com.liferay.gs.testFramework.SeleniumReadPropertyKeys.DRIVER;
+import static com.liferay.gs.testFramework.SeleniumWaitMethods.waitMediumTime;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.not;
 import static org.mockito.Mockito.mock;
@@ -32,25 +34,29 @@ public class runTest {
 
 	@BeforeClass
 	public static void setUpClass() {
-		SeleniumReadPropertyKeys.DRIVER.get(SeleniumReadPropertyKeys.getUrlToHome());
-		SeleniumReadPropertyKeys.DRIVER.manage().window().maximize();
-		SeleniumReadPropertyKeys.DRIVER.manage().timeouts().implicitlyWait(SeleniumReadPropertyKeys.getTimeOut(), TimeUnit.SECONDS);
+		DRIVER.get(SeleniumReadPropertyKeys.getUrlToHome());
+		DRIVER.manage().window().maximize();
+		DRIVER.manage().timeouts().implicitlyWait(SeleniumReadPropertyKeys.getTimeOut(), TimeUnit.SECONDS);
 	}
-	
+
 	@AfterClass
-    public static void tearDownClass() {
-		SeleniumReadPropertyKeys.DRIVER.close();
-    }
+	public static void tearDownClass() {
+		DRIVER.close();
+		waitMediumTime();
+		waitMediumTime();
+		waitMediumTime();
+		DRIVER.quit();
+	}
 
 	@Test
 	public void testCreatePageAndDeletePage() throws Exception {
 		when(pageParameters.getGroupID()).thenReturn("20143");
 		when(pageParameters.getIsPrivatePage()).thenReturn("false");
 		when(pageParameters.getPageName()).thenReturn("test page");
-		
+
 		String createResult = createPage.createPage(pageParameters);
 		Assert.assertThat(createResult, not(containsString("exception")));
-		
+
 		JSONObject findParameter = new JSONObject(createResult);
 		when(pageParameters.getLayoutId()).thenReturn(findParameter.getString("layoutId"));
 		String deleteResult = deletePage.deletePage(pageParameters);
@@ -65,11 +71,11 @@ public class runTest {
 
 		String result1 = createPage.createPage(pageParameters);
 		Assert.assertThat(result1, not(containsString("exception")));
-		
+
 		String result2 = createPage.createPage(pageParameters);
 		Assert.assertThat(result2, containsString("exception"));
 
-		//Remove the page previously created
+		// Remove the page previously created
 		JSONObject findParameter = new JSONObject(result1);
 		when(pageParameters.getLayoutId()).thenReturn(findParameter.getString("layoutId"));
 		String deleteResult = deletePage.deletePage(pageParameters);

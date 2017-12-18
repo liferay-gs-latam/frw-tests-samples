@@ -124,7 +124,7 @@ task setupIntegrationTestWithGoogleChrome {
 			println "Create Configuration for use a local SeleniumPropertyKeys.properties"
 			SeleniumPropertyKeysPath.mkdirs()
 			SeleniumPropertyKeysFile.withWriterAppend { w ->
-				w <<  "browser=defaultGC\ntime-out=10"
+				w <<  "browser=defaultGCHeadless\ntime-out=10"
 			}
 		} else {
 			println "You already had the local SeleniumPropertyKeys.properties created"
