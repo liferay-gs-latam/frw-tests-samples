@@ -19,18 +19,17 @@ import org.apache.http.protocol.BasicHttpContext;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
-import com.liferay.gs.testFramework.SeleniumReadPropertyKeys;
-
 public class CommonMethods {
 
 	private JSONObject myObj;
 
 	private static final String liferayPortalUserEmail = "manoel.cyreno@liferay.com";
 	private static final String liferayPortalPassword = "test";
+	private static final String liferayPortalURL = "http://localhost:8080";
 
 	public void executePost(String postUrl, List<NameValuePair> params) throws Exception {
 		try (CloseableHttpClient httpClient = HttpClientBuilder.create().build()) {
-			URL url = new URL(SeleniumReadPropertyKeys.DRIVER.getCurrentUrl().toString());
+			URL url = new URL(liferayPortalURL);
 			HttpHost targetHost = new HttpHost(url.getHost(), url.getPort(), url.getProtocol());
 
 			HttpPost post = new HttpPost(postUrl);

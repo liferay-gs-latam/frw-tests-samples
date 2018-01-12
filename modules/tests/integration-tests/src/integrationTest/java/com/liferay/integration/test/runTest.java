@@ -1,13 +1,9 @@
 package com.liferay.integration.test;
 
-import static com.liferay.gs.testFramework.SeleniumReadPropertyKeys.DRIVER;
-import static com.liferay.gs.testFramework.SeleniumWaitMethods.waitMediumTime;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.not;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-
-import java.util.concurrent.TimeUnit;
 
 import org.json.JSONObject;
 import org.junit.AfterClass;
@@ -17,7 +13,6 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import com.liferay.gs.testFramework.SeleniumReadPropertyKeys;
 import com.liferay.integration.api.CreatePageByRestAPI;
 import com.liferay.integration.api.DeletePageByRestAPI;
 import com.liferay.integration.api.IPageParametersByRestAPI;
@@ -34,18 +29,10 @@ public class runTest {
 
 	@BeforeClass
 	public static void setUpClass() {
-		DRIVER.get(SeleniumReadPropertyKeys.getUrlToHome());
-		DRIVER.manage().window().maximize();
-		DRIVER.manage().timeouts().implicitlyWait(SeleniumReadPropertyKeys.getTimeOut(), TimeUnit.SECONDS);
 	}
 
 	@AfterClass
 	public static void tearDownClass() {
-		DRIVER.close();
-		waitMediumTime();
-		waitMediumTime();
-		waitMediumTime();
-		DRIVER.quit();
 	}
 
 	@Test
