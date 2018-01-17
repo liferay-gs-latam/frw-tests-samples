@@ -29,7 +29,7 @@ These SAMPLES are based on Liferay GS Selenium Commons Framework, that code can 
 ## Java Script - Jasmine Unit Test (Java Script Unit Tests):
 
 1. Test Suite for verify something
-2. Test Suite for verify using specific methods 
+2. Test Suite for verify using specific methods
 
 ## How Use?
 PS.: Your Bundle must be configured previously.
@@ -56,11 +56,11 @@ PS.: Your Bundle must be configured previously.
 4. `gradle unitTest` into the unit-tests folder.
 5. For Java Script Tests Using Jasmine:
 
-5.1. Perform `npm install -g jasmine`
+5.1. Go to `/modules/tests/js-unit-tests/jasmine`
 
-5.2. Go to `/modules/tests/js-unit-tests/jasmine`
- 
-5.3. Perform `jasmine` command to run all Java Script tests.
+5.2 Run `npm i`
+
+5.3. Perform `npm run test` command to run all Java Script tests.
 
 ### Run by line command into the root folder.
 
