@@ -54,13 +54,23 @@ PS.: Your Bundle must be configured previously.
 2. `gradle cucumberTest` into the functional-tests folder.
 3. `gradle integrationTest` into the integration-tests folder.
 4. `gradle unitTest` into the unit-tests folder.
-5. For Java Script Tests Using Jasmine:
+5. For Java Script Tests :
 
-5.1. Go to `/modules/tests/js-unit-tests/jasmine`
+#### 5.1. Using Jasmine:
 
-5.2 Run `npm i`
+5.1.1. Go to `/modules/tests/js-unit-tests/jasmine`
 
-5.3. Perform `npm run test` command to run all Java Script tests.
+5.1.2 Run `npm i`
+
+5.1.3. Perform `npm run test` command to run all Java Script tests.
+
+#### 5.2. Using Karma Mocha:
+
+5.2.1. Go to `/modules/tests/js-unit-tests/mocha-karma`
+
+5.2.2. Run `npm i`
+
+5.2.3. Perform `npm run test` command to run
 
 ### Run by line command into the root folder.
 
