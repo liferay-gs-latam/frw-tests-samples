@@ -24,7 +24,6 @@ module.exports = {
       ],
       loader: 'babel-loader',
       query: {
-        plugins: ['transform-decorators-legacy', 'transform-regenerator'],
         presets: ['babel-preset-env']
       }
     }]
