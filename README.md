@@ -54,13 +54,23 @@ PS.: Your Bundle must be configured previously.
 2. `gradle cucumberTest` into the functional-tests folder.
 3. `gradle integrationTest` into the integration-tests folder.
 4. `gradle unitTest` into the unit-tests folder.
-5. For Java Script Tests Using Jasmine:
+5. For Java Script Tests :
 
-5.1. Go to `/modules/tests/js-unit-tests/jasmine`
+#### 5.1. Using Jasmine:
 
-5.2 Run `npm i`
+5.1.1. Go to `/modules/tests/js-unit-tests/jasmine`
 
-5.3. Perform `npm run test` command to run all Java Script tests.
+5.1.2 Run `npm i`
+
+5.1.3. Perform `npm run test` command to run all Java Script tests.
+
+#### 5.2. Using Karma Mocha:
+
+5.2.1. Go to `/modules/tests/js-unit-tests/mocha-karma`
+
+5.2.2. Run `npm i`
+
+5.2.3. Perform `npm run test` command to run
 
 ### Run by line command into the root folder.
 
@@ -70,7 +80,7 @@ Configure your project according: (https://github.com/manoelcyreno/lfrgs-seleniu
 2. `./gradlew modules:tests:functional-tests:cucumberTest` into the root folder.
 3. `./gradlew modules:tests:integration-tests:integrationTest` into the root folder.
 4. `./gradlew modules:tests:unit-tests:unitTest` into the root folder.
-5. For Java Script Tests Using Jasmine you must go to the specific folder according topic above.
+5. For Java Script Tests you must go to the specific folder according topic above.
 
 ### Run by IDE.
 
