@@ -10,7 +10,7 @@ const Utils = {
     },
 
     getChuckMessage() {
-        return fetch('http://api.icndb.com/jokes/random?firstName=Brian&amp;lastName=Chan')
+        return fetch('http://api.icndb.com/jokes/random?firstName=Diego&amp;lastName=Nascimento')
             .then(data => data.json())
             .then(response => {
                 return response;

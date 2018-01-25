@@ -80,7 +80,7 @@ Configure your project according: (https://github.com/manoelcyreno/lfrgs-seleniu
 2. `./gradlew modules:tests:functional-tests:cucumberTest` into the root folder.
 3. `./gradlew modules:tests:integration-tests:integrationTest` into the root folder.
 4. `./gradlew modules:tests:unit-tests:unitTest` into the root folder.
-5. For Java Script Tests Using Jasmine you must go to the specific folder according topic above.
+5. For Java Script Tests you must go to the specific folder according topic above.
 
 ### Run by IDE.
 
