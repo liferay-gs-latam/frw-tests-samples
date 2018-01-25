@@ -72,6 +72,14 @@ PS.: Your Bundle must be configured previously.
 
 5.2.3. Perform `npm run test` command to run
 
+#### 5.3 Using Jest:
+
+5.3.1. Go to `modules/tests/js-unit-tests/jest`
+
+5.3.2. Run `npm run clean` to remove any trash folder and install dependencies.
+
+5.3.3. Perform `npm run test` command to run
+
 ### Run by line command into the root folder.
 
 Configure your project according: (https://github.com/manoelcyreno/lfrgs-selenium-commons/wiki/Setup#how-to-use)
