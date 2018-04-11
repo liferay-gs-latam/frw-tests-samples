@@ -9,6 +9,8 @@ import org.junit.extensions.cpsuite.ClasspathSuite;
 import org.junit.extensions.cpsuite.ClasspathSuite.ClassnameFilters;
 import org.junit.runner.RunWith;
 
+import com.liferay.gs.testFramework.SeleniumReadPropertyKeys;
+
 @ClassnameFilters({"tests.*", ".*Test"})
 @RunWith(ClasspathSuite.class)
 public class runAllTests {
@@ -29,10 +31,12 @@ public class runAllTests {
 	public static void closeDriver() {
 		if (runnedFromAllTestsSuite == false) {
 			DRIVER.close();
-			waitMediumTime();
-			waitMediumTime();
-			waitMediumTime();
-			DRIVER.quit();
+			if (!SeleniumReadPropertyKeys.getPlatformName().contains("FF")) {
+				waitMediumTime();
+				waitMediumTime();
+				waitMediumTime();
+				DRIVER.quit();
+			} 
 		}
 	}
 

@@ -92,7 +92,7 @@ task setupPerformTestWithGoogleChrome {
 		if ( (Os.isFamily(Os.FAMILY_WINDOWS)) && (!new File( baseDir + '/tests/functional-tests-withoutBDD/SeleniumProperties/chromedriver.exe').exists()) ) {
 			println "Create Configuration for Windows to use the Google Chrome Driver"
 			download {
-				src 'https://chromedriver.storage.googleapis.com/2.34/chromedriver_win32.zip'
+				src 'https://chromedriver.storage.googleapis.com/2.37/chromedriver_win32.zip'
 				dest new File(SeleniumPropertyKeysPath, 'chromedriver_win32.zip')
 			}
 
@@ -106,7 +106,7 @@ task setupPerformTestWithGoogleChrome {
 		} else if ( (Os.isFamily(Os.FAMILY_MAC)) && (!new File( baseDir + '/tests/functional-tests-withoutBDD/SeleniumProperties/chromedriver').exists()) ) {
 			println "Create Configuration for Mac to use the Google Chrome Driver"
 			download {
-				src 'https://chromedriver.storage.googleapis.com/2.34/chromedriver_mac64.zip'
+				src 'https://chromedriver.storage.googleapis.com/2.37/chromedriver_mac64.zip'
 				dest new File(SeleniumPropertyKeysPath, 'chromedriver_mac64.zip')
 			}
             
@@ -120,7 +120,7 @@ task setupPerformTestWithGoogleChrome {
 		} else if ( (Os.isFamily(Os.FAMILY_UNIX)) && (!new File( baseDir + '/tests/functional-tests-withoutBDD/SeleniumProperties/chromedriver').exists()) ) {
 			println "Create Configuration for Unix to use the Google Chrome Driver"
 			download {
-				src 'https://chromedriver.storage.googleapis.com/2.34/chromedriver_linux64.zip'
+				src 'https://chromedriver.storage.googleapis.com/2.37/chromedriver_linux64.zip'
 				dest new File(SeleniumPropertyKeysPath, 'chromedriver_linux64.zip')
 			}
 

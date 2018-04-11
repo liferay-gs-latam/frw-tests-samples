@@ -14,7 +14,7 @@ ext {
 	junitVersion = '4.12'
 	mockitoVersion = '2.10.0'
 	seleniumVersion = '3.3.1'
-	frwSeleniumCommonsVersion = '2.2.0'
+	frwSeleniumCommonsVersion = '2.2.2'
 }
 
 configure(subprojects.findAll { !it.subprojects }) {
